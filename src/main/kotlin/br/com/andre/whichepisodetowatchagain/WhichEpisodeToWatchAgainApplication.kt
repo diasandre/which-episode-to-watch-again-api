@@ -8,7 +8,7 @@ import org.springframework.boot.runApplication
 class WhichEpisodeToWatchAgainApplication
 
 fun main(args: Array<String>) {
-	runApplication<WhichEpisodeToWatchAgainApplication>(*args){
-		setBannerMode(Banner.Mode.OFF)
-	}
+    runApplication<WhichEpisodeToWatchAgainApplication>(*args) {
+        setBannerMode(Banner.Mode.OFF)
+    }
 }
