@@ -1,6 +1,5 @@
 package br.com.andre.whichepisodetowatchagain.security
 
-import br.com.andre.whichepisodetowatchagain.enum.Role.ROLE_ADMIN
 import org.springframework.context.annotation.Bean
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
@@ -14,14 +13,20 @@ import org.springframework.security.crypto.password.PasswordEncoder
 @EnableWebSecurity
 class KotlinSecurityConfiguration(private val mongoUserDetailsService: MongoUserDetailsService) : WebSecurityConfigurerAdapter() {
 
+    companion object {
+        const val ROLE_ADMIN = "ROLE_ADMIN"
+        const val ROLE_USER = "ROLE_USER"
+    }
+
     override fun configure(http: HttpSecurity?) {
         http {
             httpBasic {}
-            csrf { disable() }
+            csrf { }
+            cors { }
             authorizeRequests {
-                authorize("/episodes/**", hasAuthority(ROLE_ADMIN.toString()))
-                authorize("/tv-shows/**", hasAuthority(ROLE_ADMIN.toString()))
-                authorize("/user/**", hasAuthority(ROLE_ADMIN.toString()))
+                authorize("/episodes/**", hasAuthority(ROLE_ADMIN))
+                authorize("/tv-shows/**", hasAuthority(ROLE_ADMIN))
+                authorize("/user/**", hasAuthority(ROLE_ADMIN))
                 authorize("/**", permitAll)
             }
         }
