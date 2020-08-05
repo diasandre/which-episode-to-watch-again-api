@@ -58,7 +58,7 @@ tasks {
         archiveBaseName.set("app")
         mergeServiceFiles()
         manifest {
-            attributes(mapOf("Main-Class" to "br.com.andre.whichepisodetowatchagain.WhichEpisodeToWatchAgainApplication"))
+            attributes(mapOf("Main-Class" to "br.com.andre.WhichEpisodeToWatchAgainApplication"))
         }
     }
 }
