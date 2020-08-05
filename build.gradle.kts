@@ -56,8 +56,8 @@ tasks {
         archiveBaseName.set("app")
     }
 
-//    build {
-//        dependsOn(bootJar)
-//    }
+    build {
+        dependsOn(bootJar)
+    }
 }
 
