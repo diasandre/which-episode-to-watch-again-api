@@ -1,3 +1,4 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val arrowVersion by extra { "0.10.5" }
@@ -8,6 +9,7 @@ plugins {
 
     id("org.springframework.boot") version "2.3.2.RELEASE"
     id("io.spring.dependency-management") version "1.0.9.RELEASE"
+    id("com.github.johnrengelman.shadow") version "6.0.0"
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.spring") version kotlinVersion
     kotlin("kapt") version kotlinVersion
@@ -50,3 +52,20 @@ tasks.withType<KotlinCompile> {
         jvmTarget = "11"
     }
 }
+
+tasks {
+    named<ShadowJar>("shadowJar") {
+        archiveBaseName.set("app")
+        mergeServiceFiles()
+        manifest {
+            attributes(mapOf("Main-Class" to "br.com.andre.whichepisodetowatchagain.WhichEpisodeToWatchAgainApplication"))
+        }
+    }
+}
+
+tasks {
+    build {
+        dependsOn(shadowJar)
+    }
+}
+
