@@ -38,10 +38,20 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     implementation("com.google.code.gson:gson:2.8.6")
+
+    implementation("org.mockito:mockito-all:1.10.19")
+    testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
+
+    testImplementation("org.junit.jupiter:junit-jupiter:5.6.2")
 }
+
+
 
 tasks.withType<Test> {
     useJUnitPlatform()
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
 }
 
 tasks.withType<KotlinCompile> {
