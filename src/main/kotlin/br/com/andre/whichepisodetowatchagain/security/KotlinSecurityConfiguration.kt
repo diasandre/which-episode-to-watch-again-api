@@ -24,7 +24,8 @@ class KotlinSecurityConfiguration(private val mongoUserDetailsService: MongoUser
             cors { }
             authorizeRequests {
                 authorize("/episodes/**", hasAuthority(ROLE_ADMIN))
-                authorize("/tv-shows/**", hasAuthority(ROLE_ADMIN))
+                authorize("/tv-shows/**", permitAll)
+                authorize("/tv-shows/save", hasAuthority(ROLE_ADMIN))
                 authorize("/user/**", hasAuthority(ROLE_ADMIN))
                 authorize("/**", permitAll)
             }
