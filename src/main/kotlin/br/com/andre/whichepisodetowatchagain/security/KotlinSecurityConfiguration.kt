@@ -22,7 +22,7 @@ class KotlinSecurityConfiguration(private val mongoUserDetailsService: MongoUser
         http {
             httpBasic {}
             csrf { }
-            cors { }
+            cors { disable() }
             authorizeRequests {
                 authorize("/episodes/**", hasAuthority(ROLE_ADMIN))
                 authorize("/tv-shows/**", hasAuthority(ROLE_ADMIN))
