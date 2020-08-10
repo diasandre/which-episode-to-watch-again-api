@@ -7,7 +7,7 @@
 - Spring Boot
 - Mongo DB
 
-## Envoiroment Variables
+## Environment variables
 - MONGO_LOGIN
 - MONGO_PASSWORD
 - MONGO_URL = xxx.mongodb.net
