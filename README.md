@@ -2,7 +2,7 @@
 
 # `which-episode-to-watch-again-api`
 
-## Requiriments 
+## Requirements 
 
 - Spring Boot
 - Mongo DB
