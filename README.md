@@ -54,7 +54,7 @@
 
 ### Save episodes to one tv show
 
-`POST /episodes/save/{tvShowId}`
+`POST /episodes/{tvShowId}`
 
 #### Body
 
