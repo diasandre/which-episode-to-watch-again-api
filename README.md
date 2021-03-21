@@ -10,7 +10,8 @@
 ## Environment variables
 - MONGO_LOGIN
 - MONGO_PASSWORD
-- MONGO_URL = xxx.mongodb.net
+- MONGO_URL = xxx.mongodb.net\
+- -Djdk.tls.client.protocols=TLSv1.2
 
 ## Requests (Without BASIC AUTH)
 
