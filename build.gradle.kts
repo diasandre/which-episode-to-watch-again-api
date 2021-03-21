@@ -4,10 +4,10 @@ val arrowVersion by extra { "0.10.5" }
 val kotlinVersion: String by project
 
 plugins {
-    val kotlinVersion = "1.3.72"
+    val kotlinVersion = "1.4.31"
 
-    id("org.springframework.boot") version "2.3.2.RELEASE"
-    id("io.spring.dependency-management") version "1.0.9.RELEASE"
+    id("org.springframework.boot") version "2.4.4"
+    id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.spring") version kotlinVersion
     kotlin("kapt") version kotlinVersion
@@ -29,6 +29,8 @@ dependencies {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
     testImplementation("org.springframework.security:spring-security-test")
+
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.+")
 
     implementation("io.arrow-kt:arrow-core:$arrowVersion")
     implementation("io.arrow-kt:arrow-fx:$arrowVersion")

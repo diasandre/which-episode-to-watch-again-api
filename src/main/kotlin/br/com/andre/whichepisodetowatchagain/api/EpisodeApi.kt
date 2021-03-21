@@ -11,7 +11,7 @@ class EpisodeApi(private val episodesWorker: EpisodesWorker) {
     @GetMapping("/{tvShowId}")
     fun listAll(@PathVariable tvShowId: Long) = episodesWorker.listAll(tvShowId)
 
-    @PostMapping("/save/{tvShowId}")
+    @PostMapping("/{tvShowId}")
     fun save(@PathVariable tvShowId: Long, @RequestBody episodes: List<EpisodeDTO>) = episodesWorker.mapAndThenSave(episodes, tvShowId)
 
 }
