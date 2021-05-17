@@ -48,7 +48,7 @@ dependencies {
     implementation("org.mockito:mockito-all:1.10.19")
     testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
 
-    testImplementation("org.junit.jupiter:junit-jupiter:5.6.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
 }
 
 
