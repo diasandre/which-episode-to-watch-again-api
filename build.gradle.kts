@@ -43,7 +43,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-    implementation("com.google.code.gson:gson:2.8.6")
+    implementation("com.google.code.gson:gson:2.8.7")
 
     implementation("org.mockito:mockito-all:1.10.19")
     testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
