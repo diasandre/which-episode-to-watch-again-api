@@ -2,6 +2,9 @@
 
 # `which-episode-to-watch-again-api`
 
+It's working fine but the new heroku policies made it impossible to deploy so i migrated everything to use aws lambda
+https://github.com/diasandre/which-episode-to-watch-again-lambda
+
 ## Requirements 
 
 - Spring Boot
